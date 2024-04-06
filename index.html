@@ -11,12 +11,18 @@
       integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
       crossorigin="anonymous"
     />
+    <style>
+        body{
+            background-color: #9c9c9c;
+            color: white;
+        }
+    </style>
 
     <title>To-Do List</title>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#"><b>To-Do List</b></a>
+        <a class="navbar-brand" href="#"><b>Your-To-Do-List</b></a>
         <button
           class="navbar-toggler"
           type="button"
@@ -179,7 +185,7 @@
                 <th scope="row">${index + 1}</th>
                 <td>${element[0]}</td> 
                 <td>${element[1]}</td>
-                <td><button class="btn btn-sm btn-primary" onclick="deleted(${index})">Delete</button></td>
+                <td><button class="btn btn-sm btn-danger" onclick="deleted(${index})">Delete</button></td>
             </tr>`;
         });
         tableBody.innerHTML = str;
